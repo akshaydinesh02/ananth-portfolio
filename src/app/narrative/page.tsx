@@ -1,4 +1,5 @@
 import Cards from "@/components/Cards";
+import Image from "next/image";
 
 const data = [
   {
@@ -43,10 +44,11 @@ const data = [
   },
 ];
 
-export default function Home() {
+export default function Narrative() {
   return (
     <main className="py-6 text-white w-[80%] mx-auto">
       <section>
+        <h1 className="text-center mb-6 text-3xl uppercase">Narrative</h1>
         <Cards cards={data} />
       </section>
     </main>

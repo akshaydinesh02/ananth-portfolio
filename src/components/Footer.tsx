@@ -5,6 +5,8 @@ import Vimeo from "@/Icons/Vimeo";
 import React from "react";
 
 const Footer = () => {
+  const date = new Date(Date.now());
+  const year = date.getFullYear();
   return (
     <div className="flex justify-between w-[80%] py-4 text-accent fixed bottom-0 backdrop-blur-3xl">
       <div className="flex max-w-[15%] rounded-lg justify-between items-center px-4">
@@ -22,8 +24,7 @@ const Footer = () => {
         </p>
       </div>
       <div className="flex flex-col items-center">
-        <p className="text-sm">All rights reserved &#169; 2024</p>
-        <p className="text-xs">Ananth Bharadwaj Munikoti</p>
+        <p className="text-sm font-bold">&#169; {year} All rights reserved.</p>
       </div>
     </div>
   );

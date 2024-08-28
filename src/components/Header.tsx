@@ -1,8 +1,15 @@
 import Link from "next/link";
+import {
+  Menubar,
+  MenubarTrigger,
+  MenubarContent,
+  MenubarItem,
+  MenubarMenu,
+} from "./ui/menubar";
 
 const Header = () => {
   return (
-    <div className="text-accent w-[80%] mb-16">
+    <div className="text-accent w-[80%] mb-8">
       <div className="mb-8">
         <Link href="/">
           <div className="flex flex-col items-center justify-center font-mainHeader uppercase">
@@ -15,24 +22,43 @@ const Header = () => {
       </div>
       <nav className="flex items-center justify-between w-full text-md">
         <div className="flex w-[30%] justify-between">
-          <Link href="/">
+          <Link href="/narrative">
             <div>Narrative</div>
           </Link>
-          <Link href="/">
-            <div>Commercial</div>
-          </Link>
-          <Link href="/">
-            <div>Music Video</div>
+          <Link href="/commercial">
+            <div>Commercial & Music Video</div>
           </Link>
         </div>
         <div className="flex w-[30%] justify-between">
-          <Link href="/">
-            <div>Reel</div>
-          </Link>
-          <Link href="/">
-            <div>Stills</div>
-          </Link>
-          <Link href="/">
+          <Menubar>
+            <MenubarMenu>
+              <MenubarTrigger className="cursor-pointer">Reel</MenubarTrigger>
+              <MenubarContent className="text-accent bg-primary">
+                <MenubarItem className="bg-primary cursor-pointer border-b">
+                  Narrative
+                </MenubarItem>
+                <MenubarItem className="bg-primary cursor-pointer">
+                  Commercial
+                </MenubarItem>
+              </MenubarContent>
+            </MenubarMenu>
+          </Menubar>
+
+          <Menubar>
+            <MenubarMenu>
+              <MenubarTrigger className="cursor-pointer">Stills</MenubarTrigger>
+              <MenubarContent className="text-accent bg-primary">
+                <MenubarItem className="bg-primary cursor-pointer border-b">
+                  Landscape / Nature
+                </MenubarItem>
+                <MenubarItem className="bg-primary cursor-pointer">
+                  <Link href="/stills/commercial">Commercial</Link>
+                </MenubarItem>
+              </MenubarContent>
+            </MenubarMenu>
+          </Menubar>
+
+          <Link href="/about">
             <div>About</div>
           </Link>
         </div>
