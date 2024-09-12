@@ -2,44 +2,46 @@ import Cards from "@/components/Cards";
 
 const data = [
   {
-    title: "title 1",
+    title: "Ready Player One",
     images: ["/image1.jpg", "/image2.jpg", "/image3.jpg"],
-    type: "type 1",
+    type: "commercial",
+    id: "1",
   },
   {
-    title: "title 2",
-    images: ["/image1.jpg", "/image2.jpg", "/image3.jpg"],
-    type: "type 2",
+    title: "Waterr - CZU Shadow",
+    images: ["/image2.jpg", "/image3.jpg", "/image1.jpg"],
+    type: "commercial",
+    id: "2",
   },
   {
-    title: "title 3",
-    images: ["/image1.jpg", "/image2.jpg", "/image3.jpg"],
-    type: "type 3",
+    title: "Apothic Red wine",
+    images: ["/image3.jpg", "/image1.jpg", "/image2.jpg"],
+    type: "commercial",
+    id: "3",
   },
   {
-    title: "title 4",
+    title: "Bluemoon",
     images: ["/image1.jpg", "/image2.jpg", "/image3.jpg"],
-    type: "type 4",
+    type: "commercial",
+    id: "4",
   },
   {
-    title: "title 4",
-    images: ["/image1.jpg", "/image2.jpg", "/image3.jpg"],
-    type: "type 5",
+    title: "Saramsha 0 Naseyo Naksheyo",
+    images: ["/image2.jpg", "/image3.jpg", "/image1.jpg"],
+    type: "music",
+    id: "5",
   },
   {
-    title: "title 4",
-    images: ["/image1.jpg", "/image2.jpg", "/image3.jpg"],
-    type: "type 6",
+    title: "Bira Spec Commercial",
+    images: ["/image3.jpg", "/image1.jpg", "/image2.jpg"],
+    type: "commercial",
+    id: "6",
   },
   {
-    title: "title 4",
+    title: "Slinky",
     images: ["/image1.jpg", "/image2.jpg", "/image3.jpg"],
-    type: "type 7",
-  },
-  {
-    title: "title 4",
-    images: ["/image1.jpg", "/image2.jpg", "/image3.jpg"],
-    type: "type 8",
+    type: "commercial",
+    id: "7",
   },
 ];
 
@@ -47,7 +49,7 @@ export default function Home() {
   return (
     <main className="py-6 text-white w-[80%] mx-auto">
       <section>
-        <Cards cards={data} />
+        <Cards cards={data} page="/" />
       </section>
     </main>
   );

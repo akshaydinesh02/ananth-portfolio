@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} ${theme} relative bg-primary min-h-screen flex flex-col justify-between items-center pt-12`}
+        className={`${inter.className} ${theme} relative bg-primary min-h-screen flex flex-col items-center pt-12`}
       >
         <Header />
         {children}

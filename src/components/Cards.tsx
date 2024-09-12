@@ -1,14 +1,26 @@
 import { Card } from "@/types";
 import Image from "next/image";
+import Link from "next/link";
 
-const Cards = ({ cards }: { cards: any }) => {
+const Cards = ({ cards, page }: { cards: any; page: string }) => {
+  console.log({ cards });
   return (
     <>
       {cards.map((card: Card, _i: number) => (
-        <div key={_i} className="flex flex-col mb-8 w-full">
+        <Link
+          href={`${page}/${card.id}`}
+          key={_i}
+          className="flex flex-col mb-8 w-full"
+        >
           <div className="flex justify-between">
             {card.images.map((image, _i) => (
-              <Image key={_i} src={image} width={500} height={500} alt="Test" />
+              <Image
+                key={`${card.id}-${_i}`}
+                src={`/${image}`}
+                width={500}
+                height={500}
+                alt={card.title}
+              />
             ))}
           </div>
           <div className="flex gap-2 py-2 uppercase items-center">
@@ -16,7 +28,7 @@ const Cards = ({ cards }: { cards: any }) => {
             <p>|</p>
             <p className="font-light text-text-secondary">{card.type}</p>
           </div>
-        </div>
+        </Link>
       ))}
     </>
   );
